@@ -1,0 +1,52 @@
+[project]
+name = "obscura-forge-mcp"
+version = "0.1.0"
+description = "MCP server for AI media generation — image, video, music, speech — via fal.ai"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "Elliott Bregni", email = "bregnie34@gmail.com" }]
+dependencies = [
+    "mcp>=1.2.0",
+    "fal-client>=0.5.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+obscura-forge-mcp = "obscura_forge_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/elliottbregni/obscura-forge-mcp"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["obscura_forge_mcp"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6",
+    "pyright>=1.1",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pyright]
+typeCheckingMode = "basic"
+pythonVersion = "3.13"
+include = ["obscura_forge_mcp", "tests"]
