@@ -17,7 +17,9 @@ dependencies = [
 obscura-forge-mcp = "obscura_forge_mcp.server:main"
 
 [project.urls]
-Homepage = "https://github.com/elliottbregni/obscura-forge-mcp"
+Homepage = "https://github.com/ElliottBregni/obscura-forge-mcp"
+Repository = "https://github.com/ElliottBregni/obscura-forge-mcp"
+Issues = "https://github.com/ElliottBregni/obscura-forge-mcp/issues"
 
 [build-system]
 requires = ["hatchling"]

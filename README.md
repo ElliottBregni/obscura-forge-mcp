@@ -45,7 +45,7 @@ Files are saved to `~/.obscura/forge/<YYYY-MM-DD>/<uuid>.<ext>`. Override with `
 ## Install
 
 ```bash
-git clone <repo-url> obscura-forge-mcp && cd obscura-forge-mcp
+git clone https://github.com/ElliottBregni/obscura-forge-mcp.git && cd obscura-forge-mcp
 uv tool install --editable .
 
 # Get a key from https://fal.ai/dashboard/keys
